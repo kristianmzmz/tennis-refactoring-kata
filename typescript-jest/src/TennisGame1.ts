@@ -34,6 +34,10 @@ export class TennisGame1 implements TennisGame {
             return this.playerWinner(pointsDifference);
         }
 
+        return this.currentScore();
+    }
+
+    private currentScore() {
         return `${this.playerScore(this.currentScorePlayer1)}-${this.playerScore(this.currentScorePlayer2)}`;
     }
 
