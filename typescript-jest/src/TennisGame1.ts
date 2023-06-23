@@ -26,18 +26,13 @@ export class TennisGame1 implements TennisGame {
     if (this.havePlayersSameScore()) {
       switch (this.currentScorePlayer1) {
         case 0:
-          score = 'Love-All';
-          break;
+          return 'Love-All';
         case 1:
-          score = 'Fifteen-All';
-          break;
+          return 'Fifteen-All';
         case 2:
-          score = 'Thirty-All';
-          break;
+          return 'Thirty-All';
         default:
-          score = 'Deuce';
-          break;
-
+          return  'Deuce';
       }
     }
     else if (this.currentScorePlayer1 >= 4 || this.currentScorePlayer2 >= 4) {
