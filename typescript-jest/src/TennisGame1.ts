@@ -21,8 +21,6 @@ export class TennisGame1 implements TennisGame {
     }
 
     getScore(): string {
-        let score: string = '';
-        let tempScore: number = 0;
         if (this.havePlayersSameScore()) {
             return this.sameScoresResult();
         }
@@ -36,7 +34,9 @@ export class TennisGame1 implements TennisGame {
             return this.playerWinner(pointsDifference);
         }
 
+        let score: string = '';
         for (let i = 1; i < 3; i++) {
+            let tempScore: number = 0;
             if (i === 1) tempScore = this.currentScorePlayer1;
             else {
                 score += '-';
@@ -57,6 +57,7 @@ export class TennisGame1 implements TennisGame {
                     break;
             }
         }
+
         return score;
     }
 
