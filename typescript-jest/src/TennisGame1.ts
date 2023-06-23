@@ -39,27 +39,27 @@ export class TennisGame1 implements TennisGame {
                 return 'Win for player1';
             }
             return 'Win for player2';
-        } else {
-            for (let i = 1; i < 3; i++) {
-                if (i === 1) tempScore = this.currentScorePlayer1;
-                else {
-                    score += '-';
-                    tempScore = this.currentScorePlayer2;
-                }
-                switch (tempScore) {
-                    case 0:
-                        score += 'Love';
-                        break;
-                    case 1:
-                        score += 'Fifteen';
-                        break;
-                    case 2:
-                        score += 'Thirty';
-                        break;
-                    case 3:
-                        score += 'Forty';
-                        break;
-                }
+        }
+
+        for (let i = 1; i < 3; i++) {
+            if (i === 1) tempScore = this.currentScorePlayer1;
+            else {
+                score += '-';
+                tempScore = this.currentScorePlayer2;
+            }
+            switch (tempScore) {
+                case 0:
+                    score += 'Love';
+                    break;
+                case 1:
+                    score += 'Fifteen';
+                    break;
+                case 2:
+                    score += 'Thirty';
+                    break;
+                case 3:
+                    score += 'Forty';
+                    break;
             }
         }
         return score;
