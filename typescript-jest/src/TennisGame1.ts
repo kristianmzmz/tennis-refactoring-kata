@@ -33,10 +33,7 @@ export class TennisGame1 implements TennisGame {
                 return this.playerWithAdvantage(minusResult);
             }
 
-            if (minusResult >= 2) {
-                return 'Win for player1';
-            }
-            return 'Win for player2';
+            return this.playerWinner(minusResult);
         }
 
         for (let i = 1; i < 3; i++) {
@@ -61,6 +58,13 @@ export class TennisGame1 implements TennisGame {
             }
         }
         return score;
+    }
+
+    private playerWinner(minusResult: number) {
+        if (minusResult >= 2) {
+            return 'Win for player1';
+        }
+        return 'Win for player2';
     }
 
     private playerWithAdvantage(minusResult: number) {
