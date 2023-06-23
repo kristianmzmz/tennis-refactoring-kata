@@ -33,9 +33,8 @@ export class TennisGame1 implements TennisGame {
                 if (minusResult === 1) {
                     return 'Advantage player1';
                 }
-                if (minusResult === -1) {
-                    return 'Advantage player2';
-                }
+
+                return 'Advantage player2';
             }
 
             if (minusResult >= 2) {
