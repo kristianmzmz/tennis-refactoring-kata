@@ -5,12 +5,8 @@ const PLAYER_ONE = 'player1';
 export class TennisGame1 implements TennisGame {
   private currentScorePlayer1: number = 0;
   private currentScorePlayer2: number = 0;
-  private player1Name: string;
-  private player2Name: string;
 
-  constructor(player1Name: string, player2Name: string) {
-    this.player1Name = player1Name;
-    this.player2Name = player2Name;
+  constructor() {
   }
 
   wonPoint(playerName: string): void {
