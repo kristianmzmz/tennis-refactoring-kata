@@ -1,5 +1,7 @@
 import { TennisGame } from './TennisGame';
 
+const PLAYER_ONE = 'player1';
+
 export class TennisGame1 implements TennisGame {
   private currentScorePlayer1: number = 0;
   private currentScorePlayer2: number = 0;
@@ -19,7 +21,7 @@ export class TennisGame1 implements TennisGame {
   }
 
   private isPlayerOne(playerName: string) {
-    return playerName === 'player1';
+    return playerName === PLAYER_ONE;
   }
 
   getScore(): string {
