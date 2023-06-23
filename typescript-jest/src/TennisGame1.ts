@@ -29,12 +29,15 @@ export class TennisGame1 implements TennisGame {
 
         if (this.hasOneOfThePlayerAdvantage()) {
             const minusResult: number = this.currentScorePlayer1 - this.currentScorePlayer2;
-            if (minusResult === 1) {
-                return 'Advantage player1';
+            if (minusResult === 1 || minusResult === -1) {
+                if (minusResult === 1) {
+                    return 'Advantage player1';
+                }
+                if (minusResult === -1) {
+                    return 'Advantage player2';
+                }
             }
-            if (minusResult === -1) {
-                return 'Advantage player2';
-            }
+
             if (minusResult >= 2) {
                 return 'Win for player1';
             }
