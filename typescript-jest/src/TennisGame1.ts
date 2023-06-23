@@ -28,12 +28,12 @@ export class TennisGame1 implements TennisGame {
         }
 
         if (this.hasOneOfThePlayerAdvantage()) {
-            const minusResult: number = this.currentScorePlayer1 - this.currentScorePlayer2;
-            if (this.hasOnePlayerOnePointMoreThanTheOther(minusResult)) {
-                return this.playerWithAdvantage(minusResult);
+            const pointsDifference: number = this.currentScorePlayer1 - this.currentScorePlayer2;
+            if (this.hasOnePlayerOnePointMoreThanTheOther(pointsDifference)) {
+                return this.playerWithAdvantage(pointsDifference);
             }
 
-            return this.playerWinner(minusResult);
+            return this.playerWinner(pointsDifference);
         }
 
         for (let i = 1; i < 3; i++) {
