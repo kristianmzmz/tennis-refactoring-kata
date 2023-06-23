@@ -29,7 +29,7 @@ export class TennisGame1 implements TennisGame {
 
         if (this.hasOneOfThePlayerAdvantage()) {
             const minusResult: number = this.currentScorePlayer1 - this.currentScorePlayer2;
-            if (minusResult === 1 || minusResult === -1) {
+            if (this.hasOnePlayerOnePointMoreThanTheOther(minusResult)) {
                 if (minusResult === 1) {
                     return 'Advantage player1';
                 }
@@ -66,6 +66,10 @@ export class TennisGame1 implements TennisGame {
             }
         }
         return score;
+    }
+
+    private hasOnePlayerOnePointMoreThanTheOther(minusResult: number) {
+        return minusResult === 1 || minusResult === -1;
     }
 
     private hasOneOfThePlayerAdvantage() {
