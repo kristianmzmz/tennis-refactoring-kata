@@ -34,20 +34,7 @@ export class TennisGame1 implements TennisGame {
             return this.playerWinner(pointsDifference);
         }
 
-        let score: string = '';
-        for (let i = 1; i < 3; i++) {
-            let tempScore: number = 0;
-            if (i === 1) {
-                tempScore = this.currentScorePlayer1;
-            } else {
-                score += '-';
-                tempScore = this.currentScorePlayer2;
-            }
-
-            score+=this.playerScore(tempScore);
-        }
-
-        return score;
+        return `${this.playerScore(this.currentScorePlayer1)}-${this.playerScore(this.currentScorePlayer2)}`;
     }
 
     private playerScore(tempScore: number) {
